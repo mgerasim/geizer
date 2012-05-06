@@ -1,4 +1,12 @@
 Geizer::Application.routes.draw do
+  resources :messages
+
+  resources :filters
+
+  resources :systems
+
+  resources :clients
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
