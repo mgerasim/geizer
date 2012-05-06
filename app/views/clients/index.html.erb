@@ -1,13 +1,13 @@
-<h1>Listing clients</h1>
+<h1>Клиенты</h1>
 
 <table>
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Secondname</th>
-    <th>Smsmail</th>
-    <th>Email</th>
-    <th>Address</th>
+    <th>Имя</th>
+    <th>Фамилия</th>
+    <th>Отчество</th>
+    <th>Сотовый номер</th>
+    <th>Электронный адрес</th>
+    <th>Адрес</th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,13 +21,13 @@
     <td><%= client.smsmail %></td>
     <td><%= client.email %></td>
     <td><%= client.address %></td>
-    <td><%= link_to 'Show', client %></td>
-    <td><%= link_to 'Edit', edit_client_path(client) %></td>
-    <td><%= link_to 'Destroy', client, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Показать', client %></td>
+    <td><%= link_to 'Редактировать', edit_client_path(client) %></td>
+    <td><%= link_to 'Удалить', client, confirm: 'Вы уверены?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Client', new_client_path %>
+<%= link_to 'Новый клиент', new_client_path %>

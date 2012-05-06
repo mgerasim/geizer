@@ -1,35 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Firstname:</b>
+  <b>Имя:</b>
   <%= @client.firstname %>
 </p>
 
 <p>
-  <b>Lastname:</b>
+  <b>Фамилия:</b>
   <%= @client.lastname %>
 </p>
 
 <p>
-  <b>Secondname:</b>
+  <b>Отчество:</b>
   <%= @client.secondname %>
 </p>
 
 <p>
-  <b>Smsmail:</b>
+  <b>Сотовый номер:</b>
   <%= @client.smsmail %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b>Электронный адрес:</b>
   <%= @client.email %>
 </p>
 
 <p>
-  <b>Address:</b>
+  <b>Почтовый адрес:</b>
   <%= @client.address %>
 </p>
 
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to 'Редактировать', edit_client_path(@client) %> |
+<%= link_to 'Назад', clients_path %>
