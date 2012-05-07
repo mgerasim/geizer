@@ -1,32 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Имя:</b>
+  <b><%= Client.human_attribute_name(:firstname) %>:</b>
   <%= @client.firstname %>
 </p>
 
 <p>
-  <b>Фамилия:</b>
+  <b><%= Client.human_attribute_name(:lastname) %>:</b>
   <%= @client.lastname %>
 </p>
 
 <p>
-  <b>Отчество:</b>
+  <b><%= Client.human_attribute_name(:secondname) %>:</b>
   <%= @client.secondname %>
 </p>
 
 <p>
-  <b>Сотовый номер:</b>
+  <b><%= Client.human_attribute_name(:smsmail) %>:</b>
   <%= @client.smsmail %>
 </p>
 
 <p>
-  <b>Электронный адрес:</b>
+  <b><%= Client.human_attribute_name(:email) %>:</b>
   <%= @client.email %>
 </p>
 
 <p>
-  <b>Почтовый адрес:</b>
+  <b><%= Client.human_attribute_name(:address) %>:</b>
   <%= @client.address %>
 </p>
 

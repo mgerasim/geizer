@@ -1,9 +1,9 @@
-<h1>Listing messages</h1>
+<h1>Сообщения</h1>
 
 <table>
   <tr>
-    <th>Msgtext</th>
-    <th>Client</th>
+    <th><%= Message.human_attribute_name(:msgtext) %></th>
+    <th><%= Message.human_attribute_name(:client_id) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= message.msgtext %></td>
     <td><%= message.client_id %></td>
-    <td><%= link_to 'Show', message %></td>
-    <td><%= link_to 'Edit', edit_message_path(message) %></td>
-    <td><%= link_to 'Destroy', message, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Показать', message %></td>
+    <td><%= link_to 'Редактировать', edit_message_path(message) %></td>
+    <td><%= link_to 'Удалить', message, confirm: 'Вы уверены?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Message', new_message_path %>
+<%= link_to 'Новое сообщение', new_message_path %>

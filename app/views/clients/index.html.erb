@@ -2,12 +2,12 @@
 
 <table>
   <tr>
-    <th>Имя</th>
-    <th>Фамилия</th>
-    <th>Отчество</th>
-    <th>Сотовый номер</th>
-    <th>Электронный адрес</th>
-    <th>Адрес</th>
+    <th><%= Client.human_attribute_name(:firstname) %></th>
+    <th><%= Client.human_attribute_name(:lastname) %></th>
+    <th><%= Client.human_attribute_name(:secondname) %></th>
+    <th><%= Client.human_attribute_name(:smsmail) %></th>
+    <th><%= Client.human_attribute_name(:email) %></th>
+    <th><%= Client.human_attribute_name(:address) %></th>
     <th></th>
     <th></th>
     <th></th>

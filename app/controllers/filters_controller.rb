@@ -1,3 +1,4 @@
+#encoding: utf-8
 class FiltersController < ApplicationController
   # GET /filters
   # GET /filters.json
@@ -44,7 +45,7 @@ class FiltersController < ApplicationController
 
     respond_to do |format|
       if @filter.save
-        format.html { redirect_to @filter, notice: 'Filter was successfully created.' }
+        format.html { redirect_to @filter, notice: 'Фильтр успешно создан.' }
         format.json { render json: @filter, status: :created, location: @filter }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class FiltersController < ApplicationController
 
     respond_to do |format|
       if @filter.update_attributes(params[:filter])
-        format.html { redirect_to @filter, notice: 'Filter was successfully updated.' }
+        format.html { redirect_to @filter, notice: 'Фильтр успешно обновлен.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

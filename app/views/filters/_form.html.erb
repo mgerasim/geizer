@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label Filter.human_attribute_name(:name) %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :resource %><br />
+    <%= f.label Filter.human_attribute_name(:resource) %> (кол-во мес.)<br />
     <%= f.number_field :resource %>
   </div>
   <div class="actions">

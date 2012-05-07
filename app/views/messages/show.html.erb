@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Msgtext:</b>
+  <b><%= Message.human_attribute_name(:msgtext) %>:</b>
   <%= @message.msgtext %>
 </p>
 
 <p>
-  <b>Client:</b>
+  <b><%= Message.human_attribute_name(:client_id) %>:</b>
   <%= @message.client_id %>
 </p>
 
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+<%= link_to 'Редактировать', edit_message_path(@message) %> |
+<%= link_to 'Назад', messages_path %>

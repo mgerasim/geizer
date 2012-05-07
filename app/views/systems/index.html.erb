@@ -1,8 +1,8 @@
-<h1>Listing systems</h1>
+<h1>Очистительные системы</h1>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th><%= System.human_attribute_name(:name) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,13 +11,13 @@
 <% @systems.each do |system| %>
   <tr>
     <td><%= system.name %></td>
-    <td><%= link_to 'Show', system %></td>
-    <td><%= link_to 'Edit', edit_system_path(system) %></td>
-    <td><%= link_to 'Destroy', system, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Показать', system %></td>
+    <td><%= link_to 'Редактировать', edit_system_path(system) %></td>
+    <td><%= link_to 'Удалить', system, confirm: 'Вы уверены?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New System', new_system_path %>
+<%= link_to 'Новая очистительная система', new_system_path %>

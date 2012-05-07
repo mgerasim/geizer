@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= System.human_attribute_name(:name) %>:</b>
   <%= @system.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_system_path(@system) %> |
-<%= link_to 'Back', systems_path %>
+<%= link_to 'Редактировать', edit_system_path(@system) %> |
+<%= link_to 'Назад', systems_path %>

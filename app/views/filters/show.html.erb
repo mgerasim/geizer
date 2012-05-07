@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= Filter.human_attribute_name(:name) %>:</b>
   <%= @filter.name %>
 </p>
 
 <p>
-  <b>Resource:</b>
+  <b><%= Filter.human_attribute_name(:resource) %>:</b>
   <%= @filter.resource %>
 </p>
 
 
-<%= link_to 'Edit', edit_filter_path(@filter) %> |
-<%= link_to 'Back', filters_path %>
+<%= link_to 'Редактировать', edit_filter_path(@filter) %> |
+<%= link_to 'Назад', filters_path %>

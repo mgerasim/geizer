@@ -1,3 +1,4 @@
+#encoding: utf-8
 class SystemsController < ApplicationController
   # GET /systems
   # GET /systems.json
@@ -44,7 +45,7 @@ class SystemsController < ApplicationController
 
     respond_to do |format|
       if @system.save
-        format.html { redirect_to @system, notice: 'System was successfully created.' }
+        format.html { redirect_to @system, notice: 'Очистительная система успешна создана.' }
         format.json { render json: @system, status: :created, location: @system }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class SystemsController < ApplicationController
 
     respond_to do |format|
       if @system.update_attributes(params[:system])
-        format.html { redirect_to @system, notice: 'System was successfully updated.' }
+        format.html { redirect_to @system, notice: 'Очистительная система успешна обновлена.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
