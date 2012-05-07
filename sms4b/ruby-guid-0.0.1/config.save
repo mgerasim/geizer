@@ -1,0 +1,12 @@
+prefix=C:/RailsInstaller/Ruby1.9.3
+std-ruby=$prefix/lib/ruby/1.9.1
+site-ruby-common=$prefix/lib/ruby/site_ruby
+site-ruby=$prefix/lib/ruby/site_ruby/1.9.1
+bin-dir=$prefix/bin
+rb-dir=$site-ruby
+so-dir=$prefix/lib/ruby/site_ruby/1.9.1/i386-msvcrt
+data-dir=$prefix/share
+ruby-path=C:/RailsInstaller/Ruby1.9.3/bin/ruby
+ruby-prog=C:/RailsInstaller/Ruby1.9.3/bin/ruby
+make-prog=make
+without-ext=no
