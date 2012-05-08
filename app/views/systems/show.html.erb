@@ -4,7 +4,7 @@
   <b><%= System.human_attribute_name(:name) %>:</b>
   <%= @system.name %>
 </p>
-
+<%= render 	'filters' %>
 
 <%= link_to 'Редактировать', edit_system_path(@system) %> |
 <%= link_to 'Назад', systems_path %>

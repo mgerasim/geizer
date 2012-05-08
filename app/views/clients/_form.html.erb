@@ -35,6 +35,14 @@
     <%= f.label Client.human_attribute_name(:address) %><br />
     <%= f.text_area :address %>
   </div>
+   <h2>Очистительные системы</h2>
+  <% for system in System.find(:all) %>
+	<div>
+		<%= check_box_tag "client[system_ids][]", system.id, @client.systems.include?(system)%>
+		<%= system.name%>
+	</div>
+
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

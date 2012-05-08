@@ -29,7 +29,7 @@
   <b><%= Client.human_attribute_name(:address) %>:</b>
   <%= @client.address %>
 </p>
-
+<%= render 	'systems' %>
 
 <%= link_to 'Редактировать', edit_client_path(@client) %> |
 <%= link_to 'Назад', clients_path %>

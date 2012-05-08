@@ -1,4 +1,4 @@
-<%= form_for(@system) do |f| %>
+﻿<%= form_for(@system) do |f| %>
   <% if @system.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@system.errors.count, "error") %> prohibited this system from being saved:</h2>
@@ -15,6 +15,16 @@
     <%= f.label System.human_attribute_name(:name) %><br />
     <%= f.text_field :name %>
   </div>
+
+  <h2>Фильтры</h2>
+  <% for filter in Filter.find(:all) %>
+	<div>
+		<%= check_box_tag "system[filter_ids][]", filter.id, @system.filters.include?(filter)%>
+		<%= filter.name%>
+	</div>
+
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
