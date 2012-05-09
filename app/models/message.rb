@@ -1,6 +1,6 @@
 #encoding: utf-8
 #require "savon_model"
-require "Iconv"
+#require "Iconv"
 class Message < ActiveRecord::Base
 
 #  has_one :client, :foreign_key => "client_id"
