@@ -135,4 +135,3 @@ DEPENDENCIES
   sqlite3
   uglifier (>= 1.0.3)
   uuidtools
-  iconv
