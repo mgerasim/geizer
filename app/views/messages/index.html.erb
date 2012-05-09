@@ -2,19 +2,17 @@
 
 <table>
   <tr>
-    <th><%= Message.human_attribute_name(:msgtext) %></th>
     <th><%= Message.human_attribute_name(:client_id) %></th>
-    <th></th>
+    <th><%= Message.human_attribute_name(:msgtext) %></th>  
     <th></th>
     <th></th>
   </tr>
 
 <% @messages.each do |message| %>
   <tr>
-    <td><%= message.msgtext %></td>
-    <td><%= message.client_id %></td>
+    <td><%= Client.find(message.client_id).client_name %></td>
+    <td><%= message.msgtext %></td>                               
     <td><%= link_to 'Показать', message %></td>
-    <td><%= link_to 'Редактировать', edit_message_path(message) %></td>
     <td><%= link_to 'Удалить', message, confirm: 'Вы уверены?', method: :delete %></td>
   </tr>
 <% end %>

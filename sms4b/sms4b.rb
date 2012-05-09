@@ -1,6 +1,6 @@
-#encoding: utf-8
+
 require 'iconv'
-require '
+
 def eraseBrackets(str) 
     
     str.gsub("{","").gsub("}","")
@@ -51,7 +51,7 @@ def get_type_of_encoding(msgtext)
   inadmissible_symbols = ["[" , "]" , "\\" , "^" , "_" , "`" , "{", "}" , "|" , "~"]
   type_of_encoding = 0
   if msgtext == nil then
-    print 'Message is empty\n'    
+    print "Message is empty\n"
   else
     for i in (0..msgtext.chomp.length-1) do
       
@@ -66,6 +66,25 @@ def get_type_of_encoding(msgtext)
   return type_of_encoding
 end
 
+def str16str(symbol)
+	
+      code = symbol.ord
+      str16x = "";
+      
+      for i in (0..15) do
+        bit = code & 1
+        case bit
+          when 0 
+            str16x += "0"
+          when 1
+            str16x += "1"
+        end
+        code = code >> 1      
+      end
+      str16x = str16x.reverse
+	return str16x
+end
+
 def enCoding(symbol, type_of_encoding)
 #  puts  symbol.encoding
   if (symbol.length==0 || type_of_encoding>1 || type_of_encoding<0)
@@ -73,10 +92,10 @@ def enCoding(symbol, type_of_encoding)
   else
     case type_of_encoding
     when 0
-      if symbol=='@'
+      if symbol=="@"
         return "00"
       else
-        if symbol=='?'
+        if symbol=="?"
           return "02"
         end
       end
@@ -106,15 +125,25 @@ def enCoding(symbol, type_of_encoding)
       str16x = high_part.to_s+low_part.to_s;
       return str16x;
     when 1
+	puts str16str(symbol)
 
-	ic = Iconv.new("UTF-16", "Windows-1251")
+
+#	symbol = symbol.encode("")
+
+	ic = Iconv.new("UCS-2", symbol.encoding.to_s)
+#	ic = Iconv.new("UTF-16", "Windows-1251")
+#	ic = Iconv.new("UTF-16", "IBM866")
+#	ic = Iconv.new("IBM866", "UTF-16")
 	symbol = ic.iconv(symbol)
-puts symbol.ord
+
+	puts str16str(symbol)
+
+#puts symbol[0].ord
+#puts "\n"
+#puts symbol[1].ord
 puts "\n"
-puts symbol[1].ord
-puts "\n"
-#	symbol = symbol.encode("UTF-8")
 #	symbol = symbol.encode("Windows-1251")
+#	puts symbol.encoding
 #	symbol = symbol.encode("UTF-16")
 #	puts symbol.encoding
 #	puts "\n"
@@ -175,7 +204,7 @@ def enCodeMessage(message)
     end
 end
 
-print 'Enter text:'
+print "Enter text:"
 msgtext = gets.chomp
 print enCodeMessage(msgtext)
 

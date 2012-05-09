@@ -1,7 +1,11 @@
 #encoding: utf-8
 require "savon_model"
-
+require "Iconv"
 class Message < ActiveRecord::Base
+
+#  has_one :client, :foreign_key => "client_id"
+   belongs_to :client, :class_name => "Client"
+
   HUMAN_ATTRIBUTE_NAMES = {
     :msgtext => 'Текст сообщения',
     :client_id => 'Клиент'  
@@ -114,10 +118,11 @@ def enCoding(symbol, type_of_encoding)
       str16x = high_part.to_s+low_part.to_s;
       return str16x;
     when 1
-
-	ic = Iconv.new("UTF-16", "Windows-1251")
+#puts symbol.encoding
+#puts "\n"
+	ic = Iconv.new("UCS-2", symbol.encoding.to_s)
 	symbol = ic.iconv(symbol)
-puts symbol.ord
+puts symbol[0].ord
 puts "\n"
 puts symbol[1].ord
 puts "\n"
@@ -278,7 +283,7 @@ end
 
 
 
-def SaveMessage( sid, smsmail, message )
+def SaveMessage( sid, smsmail, message_text )
 
     client.http.auth.ssl.verify_mode = :none
     Savon.env_namespace = :soap;
@@ -303,9 +308,9 @@ def SaveMessage( sid, smsmail, message )
         xml.SessionID(sid)
         xml.guid(UUIDTools::UUID.random_create.to_s)
 	xml.Destination( smsmail )
-	xml.Source('GERASIMOV')
-	xml.Body( enCodeMessage( message ) )
-	xml.Encoded(0)
+	xml.Source('GEIZER')
+	xml.Body( enCodeMessage( message_text ) )
+	xml.Encoded( get_type_of_encoding( message_text ) )
 	xml.dton(2)
 	xml.dnpi(0)
 	xml.ston(2)
@@ -322,4 +327,13 @@ def SaveMessage( sid, smsmail, message )
     
   end 
 
+  def sms
+	sid = Auth('mgerasim', 'zaq12wsx')
+	
+	SaveMessage(sid, Client.find(1).smsmail, msgtext)
+	CloseSession( sid )
+	
+  end
+
 end
+                                                    	

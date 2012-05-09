@@ -45,6 +45,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+ 	@message.sms
         format.html { redirect_to @message, notice: 'Сообщение успешно создано.' }
         format.json { render json: @message, status: :created, location: @message }
       else

@@ -12,13 +12,15 @@
   <% end %>
 
   <div class="field">
+    <%= f.label Message.human_attribute_name(:client_id) %><br />
+    <%= f.select :client_id, Client.find(:all).map { |u| [u.lastname + ' ' + u.firstname + ' ' + u.secondname + ' <' + u.smsmail + '>' , u.id] } %>
+  </div>
+
+  <div class="field">
     <%= f.label Message.human_attribute_name(:msgtext) %><br />
     <%= f.text_area :msgtext %>
   </div>
-  <div class="field">
-    <%= f.label Message.human_attribute_name(:client_id) %><br />
-    <%= f.number_field :client_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

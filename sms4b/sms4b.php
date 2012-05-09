@@ -1,5 +1,26 @@
 <?php
 
+function str16str($symbol)
+{
+	$code = ord($symbol);
+					$str16x = "";
+
+					for($i = 0; $i < 16; $i++)
+					{
+						$bit = $code & 1;
+						switch ($bit)
+						{
+							case 0: $str16x.="0";break;
+							case 1: $str16x.="1";break;
+						}
+						$code = $code >> 1;
+					}
+
+					$str16x = strrev($str16x);
+return $str16x;
+
+}
+
 	function eraseBrackets($str)
 	{
 		return str_replace(array("{","}"),"",$str);
@@ -115,8 +136,33 @@
 					return $str16x;
 					break;
 				case 1:
+
+
+					print str16str($symbol);
+					print "\n";
+
+
+					print str16str(iconv( "Windows-1251","UTF-16", $symbol));
+					print "\n";
+
+
+
+
+	
+					print mb_detect_encoding($symbol);
+					print "\n";
+
 					$symbol = mb_convert_encoding($symbol, "UTF-16", "Windows-1251");
-print ord($symbol);print "\n";
+
+
+					print str16str($symbol);
+					print "\n";
+
+
+					print mb_detect_encoding($symbol);
+					print "\n";
+
+
 
 					$code = (ord($symbol[0])*256+ord($symbol[1]));
 					
@@ -183,14 +229,8 @@ print ord($symbol);print "\n";
 
 			return $encoded_string;
 		}
-	}
-def OpenSession
-	
-end
+}
 
-def SendMessage( message )
-	
-end
 
     echo "Enter message:";
 	$msgtext = trim(fgets(STDIN));
