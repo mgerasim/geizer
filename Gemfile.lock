@@ -28,8 +28,6 @@ GEM
     activesupport (3.2.2)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    akami (1.0.0)
-      gyoku (>= 0.4.0)
     arel (3.0.2)
     builder (3.0.0)
     coffee-rails (3.2.2)
@@ -42,11 +40,7 @@ GEM
     erubis (2.7.0)
     execjs (1.3.1)
       multi_json (~> 1.0)
-    gyoku (0.4.4)
-      builder (>= 2.1.2)
     hike (1.2.1)
-    httpi (0.9.7)
-      rack
     i18n (0.6.0)
     journey (1.0.3)
     jquery-rails (2.0.2)
@@ -59,8 +53,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     multi_json (1.3.4)
-    nokogiri (1.5.2-x86-mingw32)
-    nori (1.1.0)
     pg (0.13.2-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -93,17 +85,6 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    savon (0.9.7)
-      akami (~> 1.0)
-      builder (>= 2.1.2)
-      gyoku (>= 0.4.0)
-      httpi (~> 0.9)
-      nokogiri (>= 1.4.0)
-      nori (~> 1.0)
-      wasabi (~> 2.0)
-    savon_model (1.2.0)
-      httpi (>= 0.7.8)
-      savon (>= 0.8.2, < 0.9.8)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -118,9 +99,6 @@ GEM
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    uuidtools (2.1.2)
-    wasabi (2.1.0)
-      nokogiri (>= 1.4.0)
 
 PLATFORMS
   x86-mingw32
@@ -131,7 +109,5 @@ DEPENDENCIES
   pg
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)
-  savon_model
   sqlite3
   uglifier (>= 1.0.3)
-  uuidtools

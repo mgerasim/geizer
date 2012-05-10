@@ -135,8 +135,8 @@ def enCoding(symbol, type_of_encoding)
 #	ic = Iconv.new("UTF-16", "IBM866")
 #	ic = Iconv.new("IBM866", "UTF-16")
 	symbol = ic.iconv(symbol)
-
-	puts str16str(symbol)
+#
+#	puts str16str(symbol)
 
 #puts symbol[0].ord
 #puts "\n"
@@ -147,7 +147,8 @@ puts "\n"
 #	symbol = symbol.encode("UTF-16")
 #	puts symbol.encoding
 #	puts "\n"
-#      symbol.encode("UTF-8")          
+#      symbol = symbol.encode("UTF-8")          
+ #     symbol = symbol.encode("UCS-2")          
       
       code = ((symbol[0].ord)*256+symbol[1].ord);
 
