@@ -7,6 +7,8 @@ Geizer::Application.routes.draw do
 
   resources :clients
 
+  match '/',		:to => 'clients#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
