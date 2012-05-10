@@ -1,3 +1,6 @@
+== Change Log
+G0001	Set root path is Client#index
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
