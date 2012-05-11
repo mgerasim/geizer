@@ -48,3 +48,61 @@ p.incr, .incr p {
     line-height: 1.44em;
     margin-bottom: 1.5em;
 }
+
+nav {
+  float: right;
+}
+
+nav {
+  background-color: white;
+  padding: 0 0.7em;
+  white-space: nowrap;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+.navigation a {
+	color: #888;
+	text-decoration: none;
+}
+.navigation a:hover {color: #002;}
+.navigation li.current-tab a {color: #222;}
+
+#main-nav li:first-child, #sub-nav li:first-child {margin-left: 0;}
+
+/* Main navigation */
+#main-nav {padding-top: 30px;}
+/* #main-nav {padding-top: 20px;} */
+#main-nav li {margin: 0 1.5em;}
+#main-nav a {
+	font-size: 1.6em;
+	line-height: 2em;
+	padding-bottom: 2px;
+	color: #000000;
+}
+#main-nav li.current-tab a {color: #333;}
+#main-nav a:hover {color: #94CC5F;}
+#main-nav li.current-tab a {border-bottom: 2px solid #94CC5F;}
