@@ -1,0 +1,50 @@
+/*
+body {
+    background-color: #afffff;
+}
+
+.container {
+    background-color: #fff;
+    
+
+}
+*/
+
+.otstup {
+    height: 75px;
+    
+}
+/*
+#header {
+    background: url(/images/body-bot.jpg) 0 -10px repeat-x;
+    background-size: 100%;
+padding:1em 0 1.5em 0;
+
+}
+
+#main {
+    border-right:2px solid #222;
+border-bottom:2px solid #222;
+margin:0 auto;
+width:958px;
+}
+
+#main_content {
+background:#fff;
+border:2px solid #ccc;
+
+}
+
+*/
+.alt {
+    color: #666;
+    font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+p.incr, .incr p {
+    font-size: 15px;
+    line-height: 1.44em;
+    margin-bottom: 1.5em;
+}

@@ -1,7 +1,7 @@
 #encoding: utf-8
 class Client < ActiveRecord::Base
 
-  attr_accessible  :firstname, :lastname, :secondname, :smsmail, :email
+  attr_accessible  :firstname, :lastname, :secondname, :smsmail, :email, :address, :system_ids
 
   HUMAN_ATTRIBUTE_NAMES = {
     :firstname => 'Имя',
